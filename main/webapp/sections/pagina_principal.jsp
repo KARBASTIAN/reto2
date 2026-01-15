@@ -13,23 +13,23 @@
 
             <div class="conteido">
                 <h1>VOLUWORLD</h1>
-                <p class="eslogan">M脕S QUE UN EVENTO, UNA ACCI脫N</p>
+                <p class="eslogan">M罶 QUE UN EVENTO, UNA ACCI覰</p>
             </div>
         </section>
 
 
 
         <section id="eventos" class="eventos-section">
-            <h2 class="section-title-eventos">Pr贸ximos Eventos</h2>
+            <h2 class="section-title-eventos">Pr髕imos Eventos</h2>
 
             <div class="event-gallery">
 
                 <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestaci贸n" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestaci髇" class="event-image">
                     <div class="event-info">
                         <h3>Bicicletas en la Ciudad</h3>
                         <p>S谩bado, 15 Noviembre | Plentzia</p>
-                        <a href="eventos.jsp" class="join-button">Ver Detalles</a>
+                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                     </div>
                 </article>
 
@@ -38,20 +38,20 @@
                     <div class="event-info">
                         <h3>Marat贸n por la Vida</h3>
                         <p>Domingo, 23 Noviembre | Gorliz</p>
-                        <a href="<%=request.getContextPath()%>eventos.jsp" class="join-button">Ver Detalles</a>
+                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                     </div>
                 </article>
 
                 <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Marat贸n Solidario" class="event-image">
+                    <img src="<%=request.getContextPath()%>/eventos" alt="Marat髇 Solidario" class="event-image">
                     <div class="event-info">
-                        <h3>Corre y no mires atr谩s</h3>
-                        <p>S谩bado, 6 Diciembre | Ereaga</p>
-                        <a href="<%=request.getContextPath()%>eventos.jsp" class="join-button">Ver Detalles</a>
+                        <h3>Corre y no mires atr醩</h3>
+                        <p>S醔ado, 6 Diciembre | Ereaga</p>
+                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                     </div>
                 </article>
             </div>
-            <a href="<%=request.getContextPath()%>eventos.jsp"><button class="boton_evento">VER M脕S</button></a>
+            <a href="<%=request.getContextPath()%>/eventos"><button class="boton_evento">VER M羴S</button></a>
         </section>
 
 
@@ -59,24 +59,24 @@
 
         <section class="voluntariado-section" id="voluntariado">
 
-            <a href="<%=request.getContextPath()%>/voluntariado.jsp" id="enlacep">
+            <a href="<%=request.getContextPath()%>/volES" id="enlacep">
                 <div class="voluntariado-card">
 
                     <h2 class="card-title">Voluntariado</h2>
                     <p class="card-text">
-                        Los voluntarios son el coraz贸n de cada evento. Su dedicaci贸n, energ铆a y compromiso hacen
+                        Los voluntarios son el coraz髇 de cada evento. Su dedicaci髇, energ韆 y compromiso hacen
                         posible
                         que
-                        todo funcione a la perfecci贸n. Participar como voluntario no solo significa ayudar, sino
-                        tambi茅n
-                        formar parte de una comunidad solidaria, compartir experiencias 煤nicas y crecer personal y
+                        todo funcione a la perfecci髇. Participar como voluntario no solo significa ayudar, sino
+                        tambi閚
+                        formar parte de una comunidad solidaria, compartir experiencias 鷑icas y crecer personal y
                         profesionalmente.
 
-                        Cada voluntario cumple un rol esencial dentro de la organizaci贸n: algunos se encargan de la
+                        Cada voluntario cumple un rol esencial dentro de la organizaci髇: algunos se encargan de la
                         acogida
-                        y atenci贸n al p煤blico, otros colaboran en montaje y desmontaje de espacios, gesti贸n de
+                        y atenci髇 al p鷅lico, otros colaboran en montaje y desmontaje de espacios, gesti髇 de
                         materiales,
-                        apoyo t茅cnico o coordinaci贸n de actividades. Tambi茅n hay quienes ayudan en comunicaci贸n,
+                        apoyo t茅cnico o coordinaci贸n de actividades. Tambi茅n hay quienes ayudan en comunicaci髇,
                         fotograf铆a
                         o redes sociales, contribuyendo a difundir el impacto del evento.
 
@@ -125,7 +125,7 @@
                 </p>
             </div>
             <div class="equipo-enlace" id="equipo">
-                <a href="<%=request.getContextPath()%>curriculum.jsp" target="_blank">
+                <a href="<%=request.getContextPath()%>/cves" target="_blank">
                     <em>Con贸cenos</em>
                 </a>
             </div>

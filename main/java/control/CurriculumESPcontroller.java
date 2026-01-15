@@ -8,20 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Eventos
+ * Servlet implementation class CurriculumESPcontroller
  */
-@WebServlet("/eventos")
-public class Eventos extends HttpServlet {
+@WebServlet("/cves")
+public class CurriculumESPcontroller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
 
+
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		request.setAttribute("view", "/sections/eventos.jsp");
+		request.setAttribute("view","/sections/curriculum.jsp");
 		request.getRequestDispatcher("./layout.jsp").forward(request, response);
 	}
 
 	
-
 }

@@ -15,7 +15,7 @@
 <body>
 
     <header class="main-header">
-        <a href="<%=request.getContextPath()%>/sections/pagina_principal.jsp">
+        <a href="<%=request.getContextPath()%>/home">
             <div class="logo">
 
                 <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
@@ -28,9 +28,9 @@
         <div class="header-right-content">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#eventos">EVENTOS</a></li>
-                    <li><a href="#voluntariado">VOLUNTARIADO</a></li>
-                    <li><a href="#quienesSomos">QUIÉNES SOMOS</a></li>
+                    <li><a href="<%=request.getContextPath()%>/eventos">EVENTOS</a></li>
+                    <li><a href="<%=request.getContextPath()%>/volES">VOLUNTARIADO</a></li>
+                    <li><a href="<%=request.getContextPath()%>/cves">QUIɉNES SOMOS</a></li>
                     <li><a href="#contacto">CONTACTO</a></li>
                     <li><a href="#faq-section">PREGUNTAS</a></li>
 

@@ -16,7 +16,7 @@ public class voluntariadoController extends HttpServlet {
        
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("view","/sections/pagina_principal.jsp");
+		request.setAttribute("view","/sections/voluntariado.jsp");
 		request.getRequestDispatcher("./layout.jsp").forward(request, response);
 	}
 
