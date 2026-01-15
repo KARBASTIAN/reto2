@@ -1,0 +1,190 @@
+/* 1. Tipografía y Estructura General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b464b;
+    color: #ACC1C2;
+    /* Necesario para que el footer se quede abajo*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+/* Estilos del Header */
+.main-header {
+    background-color: #405f63ef;
+    color: #000000;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+}
+
+
+
+.header-right-content { 
+    display: flex;
+    color: #1b464b;
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos de la Navegación */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    white-space: nowrap; /*el QUIENES SOMOS, en una linea*/
+}
+
+
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.main-nav a:hover {
+    color:#537679;
+}
+
+
+/*LOGO MAS H1 DEL LOGO*/
+.logo{
+    display: flex;
+    flex-direction: row;
+    color: #1b464b;
+    text-shadow: 2px 2px 4px rgb(214, 214, 214);
+}
+
+.logo img{
+    width: auto; /*se conecta con el height*/
+    height: 90px;
+}
+/* Estilos del Footer */
+.main-footer {
+    background-color: #a3b6b7;
+    color: #1b464b;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.main-footer a {
+    color: #1b464b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+.letras h1{
+    display: flex;
+    flex-direction: row;
+    color: #1b464b;
+    text-shadow: 2px 2px 4px rgb(214, 214, 214);
+    width: 100%;
+    margin-right: 500px;
+    
+}
+.logo img{
+    margin-left: -2%;
+    width: 200%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-section {
+    padding: 60px 5%; 
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    color: #a3b6b7;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #ACC1C2;
+    padding-bottom: 10px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: #24585f;
+    border-radius: 8px;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+
+.TituloE {
+ text-align: center;
+}
+
+/* Estilos seccion equipo y miembros*/
+
+.miembros{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.miembro{
+    width: 220px;
+}
+.miembro img{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.miembro h3{
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+.descripcion{
+    text-align: justify;
+    line-height: 1.5;
+    text-justify: inter-word;
+    margin: 0 auto;
+    width: 90%;
+    word-spacing: -0,5px;
+    hyphens: auto;
+    margin-bottom: 60px;
+}
+a{
+    text-decoration: none;
+}
