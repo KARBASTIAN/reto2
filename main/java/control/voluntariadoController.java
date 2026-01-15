@@ -8,19 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PaginaPrincipalController
+ * Servlet implementation class voluntariadoController
  */
-@WebServlet("/home")
-public class PaginaPrincipalController extends HttpServlet {
+@WebServlet(name = "volES", urlPatterns = { "/volES" })
+public class voluntariadoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
-
+ 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("view","/sections/pagina_principal.jsp");
 		request.getRequestDispatcher("./layout.jsp").forward(request, response);
 	}
 
 	
-
 }

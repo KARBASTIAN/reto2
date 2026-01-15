@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOLUWORLD</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
 
-<body>
 
     
     <main>
-
 
         <section class="portada">
 
             <!--Aqui va el video de fondo de la portada-->
             <video autoplay muted loop class="videoFondo">
-                <source src="assets/FondoBorroso.mp4" type="video/mp4">
+                <source src="<%=request.getContextPath()%>/assets/FondoBorroso.mp4" type="video/mp4">
             </video>
 
             <div class="conteido">
@@ -38,7 +25,7 @@
             <div class="event-gallery">
 
                 <article class="event-card">
-                    <img src="assets/bici.jpg" alt="Evento Reforestación" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestación" class="event-image">
                     <div class="event-info">
                         <h3>Bicicletas en la Ciudad</h3>
                         <p>Sábado, 15 Noviembre | Plentzia</p>
@@ -47,24 +34,24 @@
                 </article>
 
                 <article class="event-card">
-                    <img src="assets/Maratón-de-Valencia.jpg" alt="Evento Limpieza Playas" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/Marat�n-de-Valencia.jpg" alt="Evento Limpieza Playas" class="event-image">
                     <div class="event-info">
                         <h3>Maratón por la Vida</h3>
                         <p>Domingo, 23 Noviembre | Gorliz</p>
-                        <a href="eventos.jsp" class="join-button">Ver Detalles</a>
+                        <a href="<%=request.getContextPath()%>eventos.jsp" class="join-button">Ver Detalles</a>
                     </div>
                 </article>
 
                 <article class="event-card">
-                    <img src="assets/FotoNoticia.jpg" alt="Maratón Solidario" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Maratón Solidario" class="event-image">
                     <div class="event-info">
                         <h3>Corre y no mires atrás</h3>
                         <p>Sábado, 6 Diciembre | Ereaga</p>
-                        <a href="eventos.jsp" class="join-button">Ver Detalles</a>
+                        <a href="<%=request.getContextPath()%>eventos.jsp" class="join-button">Ver Detalles</a>
                     </div>
                 </article>
             </div>
-            <a href="eventos.jsp"><button class="boton_evento">VER MÁS</button></a>
+            <a href="<%=request.getContextPath()%>eventos.jsp"><button class="boton_evento">VER MÁS</button></a>
         </section>
 
 
@@ -72,7 +59,7 @@
 
         <section class="voluntariado-section" id="voluntariado">
 
-            <a href="voluntariado.jsp" id="enlacep">
+            <a href="<%=request.getContextPath()%>/voluntariado.jsp" id="enlacep">
                 <div class="voluntariado-card">
 
                     <h2 class="card-title">Voluntariado</h2>
@@ -138,7 +125,7 @@
                 </p>
             </div>
             <div class="equipo-enlace" id="equipo">
-                <a href="curriculum.jsp" target="_blank">
+                <a href="<%=request.getContextPath()%>curriculum.jsp" target="_blank">
                     <em>Conócenos</em>
                 </a>
             </div>
@@ -233,6 +220,8 @@
         </div>
     </section>
 
+
+
 </main>
 
 
@@ -240,8 +229,3 @@
 
 
 
-
-
-</body>
-
-</html>

@@ -19,7 +19,7 @@ public class Eventos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		request.setAttribute("view", "sections/eventos.jsp");
-		request.getRequestDispatcher("/layout.jsp").forward(request, response);
+		request.getRequestDispatcher("./layout.jsp").forward(request, response);
 	}
 
 	

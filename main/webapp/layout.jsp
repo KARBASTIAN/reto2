@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 
 <body>
 
     <header class="main-header">
-        <a href="pagina_principal.jsp">
+        <a href="<%=request.getContextPath()%>/sections/pagina_principal.jsp">
             <div class="logo">
 
                 <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
@@ -49,7 +50,9 @@
         </div>
     </header>
    
-   <jsp:include page="${view}"/>
+	  <jsp:include page="/sections/pagina_principal.jsp" />
+	
+	
    
 
     <footer class="main-footer">
