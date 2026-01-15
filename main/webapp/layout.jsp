@@ -50,7 +50,7 @@
         </div>
     </header>
    
-	  <jsp:include page="/sections/pagina_principal.jsp" />
+	  <jsp:include page="${view}" />
 	
 	
    
