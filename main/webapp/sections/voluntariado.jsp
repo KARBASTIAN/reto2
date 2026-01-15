@@ -13,34 +13,7 @@
 
 <body>
 
-    <header class="main-header">
-
-        <a href="pagina_principal.jsp">
-            <div class="logo">
-                <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
-            </div>
-        </a>
-
-        <a href="pagina_principal.jsp">
-            <div class="letras">
-                <h1>VOLUWORLD</h1>
-            </div>
-        </a>
-
-
-
-
-        <div class="header-right-content">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="eventos.jsp">EVENTOS</a></li>
-                    <li><a href="curriculum.jsp">QUIÉNES SOMOS</a></li>
-                    <li><a href="pagina_principal.jsp">CONTACTO</a></li>
-                    <li><a href="pagina_principal.jsp">PREGUNTAS</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+   
 
 
     
@@ -140,14 +113,7 @@
 
 
 
-    <footer class="main-footer">
-        <p>&copy; 2025 VoluWorld | Todos los derechos reservados.</p>
-        <div class="social-links">
-            <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
-            <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |
-            <a link href="https://www.youtube.com/user/CentroSanLuis" target="_blank">Youtube</a>
-        </div>
-    </footer>
+    
 </body>
 
 </html>

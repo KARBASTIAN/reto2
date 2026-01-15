@@ -53,7 +53,7 @@
    
 
     <footer class="main-footer">
-        <p>&copy; 2025 VoluWorld | Todos los derechos reservados.</p>
+        <p>&copy; 2026 VoluWorld | Todos los derechos reservados.</p>
         <div class="social-links">
             <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
             <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |
