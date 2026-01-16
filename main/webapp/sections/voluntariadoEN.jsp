@@ -8,40 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/stylevoluntariado.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/stylevoluntariado.css">
 </head>
 
 <body>
 
-    <header class="main-header">
-
-        <a href="pagina_english.jsp">
-            <div class="logo">
-                <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
-            </div>
-        </a>
-
-        <a href="pagina_english.jsp">
-            <div class="letras">
-                <h1>VOLUWORLD</h1>
-            </div>
-        </a>
-
-
-
-        <div class="header-right-content">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="eventosEN.jsp">EVENTS</a></li>
-                    <li><a href="curriculumEN.jsp">WHO WE ARE</a></li>
-                    <li><a href="pagina_english.jsp">CONTACT</a></li>
-                    <li><a href="pagina_principal.jsp">QUESTIONS</a></li>
-                </ul>
-            </nav>
-
-
-        </div>
-    </header>
+    
     <section>
         <div class="voluntariado-card" id="voluntariado">
             <h1>Volunteering</h1>
@@ -51,9 +23,9 @@
                 atmosphere. It's not just about helping, but about sharing a memorable experience that leaves a lasting
                 impression on both the participants and yourself.
             </p>
-            <aside><img src="/assets/pedro.jpg" target="_blank" class="pedros">
-                <img src="/assets/peru.jpg" target="_blank" class="pedros">
-                <img src="/assets/VOLUNTARIAT_2.jpg" target="_blank" class="pedros">
+            <aside><img src="<%=request.getContextPath()%>/assets/pedro.jpg" target="_blank" class="pedros">
+                <img src="<%=request.getContextPath()%>/assets/peru.jpg" target="_blank" class="pedros">
+                <img src="<%=request.getContextPath()%>/assets/VOLUNTARIAT_2.jpg" target="_blank" class="pedros">
 
             </aside>
 
@@ -136,14 +108,7 @@
 
 
 
-    <footer class="main-footer">
-        <p>&copy; 2025 VoluWorld | All rights reserved.</p>
-        <div class="social-links">
-            <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
-            <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |
-            <a link href="https://www.youtube.com/user/CentroSanLuis" target="_blank">Youtube</a>
-        </div>
-    </footer>
+    
 </body>
 
 </html>

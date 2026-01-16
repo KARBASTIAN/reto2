@@ -26,9 +26,9 @@
                 ambiente positivo. No se trata solo de ayudar, sino de vivir una experiencia compartida que deja huella
                 tanto en los participantes como en ti mismo.
             </p>
-            <aside><img src="/assets/pedro.jpg" target="_blank" class="pedros">
-                <img src="/assets/peru.jpg" target="_blank" class="pedros">
-                <img src="/assets/VOLUNTARIAT_2.jpg" target="_blank" class="pedros">
+            <aside><img src="<%=request.getContextPath()%>/assets/pedro.jpg" target="_blank" class="pedros">
+                <img src="<%=request.getContextPath()%>/assets/peru.jpg" target="_blank" class="pedros">
+                <img src="<%=request.getContextPath()%>/assets/VOLUNTARIAT_2.jpg" target="_blank" class="pedros">
 
             </aside>
 

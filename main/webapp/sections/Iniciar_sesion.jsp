@@ -8,25 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styleiniciar.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styleiniciar.css">
 </head>
 
 <body>
 
-    <header>
-        <a href="pagina_principal.jsp">
-            <h1 class="hea"><a href="pagina_principal.jsp"><img src="/assets/casafea.jpg" target="_blank"
-                        class="logo"></a>MÁS QUE UN EVENTO, UNA ACCIÓN</h1>
-
-    </header>
+    
 
     <div class="logoytitulo">
-        <img src="assets/logo oscuro-Photoroom.png" class="imgsesion" alt="logo">
+        <img src="<%=request.getContextPath()%>/assets/logo oscuro-Photoroom.png" class="imgsesion" alt="logo">
         <h1 class="titulose">VOLUWORLD</h1>
     </div>
 
 
-    <form action="/pagina_principal.jsp" method="get">
+    <form action="<%=request.getContextPath()%>/home" method="get">
         <label class="cyc" for="femail">Correo</label>
         <input type="email" id="femails"></br>
         <label class="cyc" for="Contraseña">Contraseña</label>
@@ -58,14 +53,7 @@
     </form>
 
 
-    <footer class="main-footer">
-        <p>&copy; 2025 VoluWorld | Todos los derechos reservados.</p>
-        <div class="social-links">
-            <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
-            <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |
-            <a link href="https://www.youtube.com/user/CentroSanLuis" target="_blank">Youtube</a>
-        </div>
-    </footer>
+   
 </body>
 
 </html>

@@ -15,38 +15,35 @@
 <body>
 
     <header class="main-header">
-        <a href="<%=request.getContextPath()%>/home">
-            <div class="logo">
-
-                <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
-                <h1>VOLUWORLD</h1>
-
-
-            </div>
+        <a href="<%=request.getContextPath()%>/princiEN">
+        <div class="logo">
+            <img src="<%=request.getContextPath()%>/assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
+            <h1>VOLUWORLD</h1>
+        </div>
         </a>
 
         <div class="header-right-content">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="<%=request.getContextPath()%>/eventos">EVENTOS</a></li>
-                    <li><a href="<%=request.getContextPath()%>/volES">VOLUNTARIADO</a></li>
-                    <li><a href="<%=request.getContextPath()%>/cves">QUIɉNES SOMOS</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                    <li><a href="#faq-section">PREGUNTAS</a></li>
-
+                    <li><a href="<%=request.getContextPath()%>/eventosEN">EVENTS</a></li>
+                    <li><a href="<%=request.getContextPath()%>/voluntariadoEN">VOLUNTEERING</a></li>
+                    <li><a href="<%=request.getContextPath()%>/cven">WHO WE ARE</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#questions">QUESTIONS</a></li>
                 </ul>
             </nav>
 
-
             <div class="language-selector">
-                <button class="lang-button active">ES</button>
-                <form action="<%=request.getContextPath()%>/princiEN">
-                    <button class="lang-button">EN</button>
+                <form action="<%=request.getContextPath()%>/home">
+                    <button class="lang-button active">ES</button>
                 </form>
+                <button class="lang-button">EN</button>
             </div>
-            <a href="<%=request.getContextPath()%>/sesionES">
-                <img src="<%=request.getContextPath()%>/assets/persona-logol.jpg" target="_blank" class="peioguapo">
-            </a>
+       
+        <a href="<%=request.getContextPath()%>/sesionEN">
+        <img src="<%=request.getContextPath()%>/assets/persona-logol.jpg" target="_blank" class="peioguapo">
+        </a>
+    
         </div>
     </header>
    
@@ -56,7 +53,7 @@
    
 
     <footer class="main-footer">
-        <p>&copy; 2026 VoluWorld | Todos los derechos reservados.</p>
+        <p>&copy; 2025 VoluWorld | All rights reserved.</p>
         <div class="social-links">
             <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
             <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |

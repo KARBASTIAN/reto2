@@ -8,43 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 
 <body>
 
-    <header class="main-header">
-        <a href="pagina_english.jsp">
-        <div class="logo">
-            <img src="assets/logo oscuro-Photoroom.png" alt="VOLUWORLD">
-            <h1>VOLUWORLD</h1>
-        </div>
-        </a>
-
-        <div class="header-right-content">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#eventos">EVENTS</a></li>
-                    <li><a href="#volunteering">VOLUNTEERING</a></li>
-                    <li><a href="#whoweare">WHO WE ARE</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#questions">QUESTIONS</a></li>
-                </ul>
-            </nav>
-
-            <div class="language-selector">
-                <form action="http://127.0.0.1:5500/pagina_principal.jsp">
-                    <button class="lang-button active">ES</button>
-                </form>
-                <button class="lang-button">EN</button>
-            </div>
-       
-        <a href="iniciarsesionEN.jsp">
-        <img src="/assets/persona-logol.jpg" target="_blank" class="peioguapo">
-        </a>
     
-        </div>
-    </header>
 
     <main>
 
@@ -54,7 +23,7 @@
 
             <!--Aqui va el video de fondo de la portada-->
             <video autoplay muted loop class="videoFondo">
-                <source src="assets/FondoBorroso.mp4" type="video/mp4">
+                <source src="<%=request.getContextPath()%>/assets/FondoBorroso.mp4" type="video/mp4">
             </video>
 
             <div class="conteido">
@@ -72,41 +41,41 @@
             <div class="event-gallery">
 
                 <article class="event-card">
-                    <img src="assets/bici.jpg" alt="Reforestation Event" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Reforestation Event" class="event-image">
                     <div class="event-info">
                         <h3>Bikes in the City</h3>
                         <p>Saturday, November 15 | Plentzia</p>
-                        <a href="" class="join-button">View Details</a>
+                        <a href="<%=request.getContextPath()%>/eventosEN" class="join-button">View Details</a>
                     </div>
                 </article>
 
                 <article class="event-card">
-                    <img src="assets/MaratÃ³n-de-Valencia.jpg" alt="Beach Cleanup Event" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/Maratón-de-Valencia.jpg" alt="Beach Cleanup Event" class="event-image">
                     <div class="event-info">
                         <h3>Marathon for Life</h3>
                         <p>Sunday, November 23 | Gorliz</p>
-                        <a href="" class="join-button">View Details</a>
+                        <a href="<%=request.getContextPath()%>/eventosEN" class="join-button">View Details</a>
                     </div>
                 </article>
 
                 <article class="event-card">
-                    <img src="assets/FotoNoticia.jpg" alt="Charity Marathon" class="event-image">
+                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Charity Marathon" class="event-image">
                     <div class="event-info">
                         <h3>Run and Don't Look Back</h3>
                         <p>Saturday, December 6 | Ereaga</p>
-                        <a href="" class="join-button">View Details</a>
+                        <a href="<%=request.getContextPath()%>/eventosEN" class="join-button">View Details</a>
                     </div>
                 </article>
 
             </div>
 
-            <a href="eventosEN.jsp"><button  class="boton_evento">VIEW MORE</button></a>
+            <a href="<%=request.getContextPath()%>/eventosEN"><button  class="boton_evento">VIEW MORE</button></a>
         </section>
 
 
             <section class="voluntariado-section" id="volunteering">
 
-                <a href="voluntariadoEN.jsp" id="enlacep">
+                <a href="<%=request.getContextPath()%>/voluntariadoEN" id="enlacep">
                 <div class="voluntariado-card">
 
                     <h2 class="card-title">Voluntering</h2>
@@ -251,14 +220,7 @@
         </div>
     </section>
 
-    <footer class="main-footer">
-        <p>&copy; 2025 VoluWorld | All rights reserved.</p>
-        <div class="social-links">
-            <a link href="https://www.facebook.com/share/17ZfEz1xNG/?mibextid=wwXIfr" target="_blank">Facebook</a> |
-            <a link href="https://www.instagram.com/centro_sanluis/" target="_blank">Instagram</a> |
-            <a link href="https://www.youtube.com/user/CentroSanLuis" target="_blank">Youtube</a>
-        </div>
-    </footer>
+    
 </body>
 
 </html>
