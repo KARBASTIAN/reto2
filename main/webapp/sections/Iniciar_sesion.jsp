@@ -21,11 +21,11 @@
     </div>
 
 
-    <form action="<%=request.getContextPath()%>/home" method="get">
+    <form action="<%=request.getContextPath()%>/servlogin" method="POST">
         <label class="cyc" for="femail">Correo</label>
-        <input type="email" id="femails"></br>
+        <input type="email" id="femails" name="correo"></br>
         <label class="cyc" for="Contraseña">Contraseña</label>
-        <input type="password" id="Contraseñas"></br>
+        <input type="password" id="Contraseñas" name="pass"></br>
         <input class="enter" type="submit" value="Entrar">
 
         <a link href="https://support.google.com/accounts/answer/7682439?hl=es">
