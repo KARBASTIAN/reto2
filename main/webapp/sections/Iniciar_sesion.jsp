@@ -38,7 +38,7 @@
                 <li>¿No tienes cuenta?</li>
             </ul></br>
 
-            <input buttom class="b_reg" type="submit" value="Registrate"></buttom>
+           <a href="<%=request.getContextPath()%>/registerEmp" class="join-button">registrarse</a>
 
             <li class="registrate_IS">O registrate con:</li></br>
 

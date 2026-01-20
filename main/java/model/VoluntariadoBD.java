@@ -41,4 +41,18 @@ public class VoluntariadoBD extends AccesoBD {
 		return u;
 	}
 	
-}
+	public ArrayList<UserEmpresa> getusuariosEmpresa() throws SQLException {
+		ArrayList<UserEmpresa> useremp = new ArrayList<UserEmpresa>();
+		ResultSet rs = super.lanzarSelect("select * from usuariostodo");
+		while (rs.next()) {
+			// Cada registro lo introducimos como objeto en el arraylist
+			// rs.getInt("id"),rs.getInt("id_roles"),rs.getString("nif"),rs.getString("nombre"),rs.getString("correo"),rs.getString("telefono"),rs.getString("ciudad"),rs.getString("pass")
+			UserEmpresa e = new UserEmpresa(rs.getString("nombre_empresa"), rs.getString("tipo_empresa"), rs.getString("correo"),
+					rs.getString("telefono"), rs.getString("ciudad"), rs.getString("pass"), rs.getInt("id"), db, db);
+			useremp.add(e);
+
+		}
+		return useremp;
+	
+		}
+	}
