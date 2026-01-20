@@ -2,6 +2,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -54,6 +55,12 @@ public class AccesoBD {
 		return rs;
 		
 	}
+	public PreparedStatement lanzarInsert(String sql) throws SQLException {
+		PreparedStatement ps = null;
+		ps = con.prepareStatement(sql);
+		return ps;
+	}
+	
 	public void disconnect() {
 		try {
 			st.close();

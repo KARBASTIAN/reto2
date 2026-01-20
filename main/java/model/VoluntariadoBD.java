@@ -3,6 +3,10 @@ package model;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 
 public class VoluntariadoBD extends AccesoBD {
 
@@ -41,18 +45,31 @@ public class VoluntariadoBD extends AccesoBD {
 		return u;
 	}
 	
-	public ArrayList<UserEmpresa> getusuariosEmpresa() throws SQLException {
-		ArrayList<UserEmpresa> useremp = new ArrayList<UserEmpresa>();
-		ResultSet rs = super.lanzarSelect("select * from usuariostodo");
-		while (rs.next()) {
-			// Cada registro lo introducimos como objeto en el arraylist
-			// rs.getInt("id"),rs.getInt("id_roles"),rs.getString("nif"),rs.getString("nombre"),rs.getString("correo"),rs.getString("telefono"),rs.getString("ciudad"),rs.getString("pass")
-			UserEmpresa e = new UserEmpresa(rs.getString("nombre_empresa"), rs.getString("tipo_empresa"), rs.getString("correo"),
-					rs.getString("telefono"), rs.getString("ciudad"), rs.getString("pass"), rs.getInt("id"), db, db);
-			useremp.add(e);
+	public UserEmpresa registerEmpresa(
+	        String nif,
+	        String correo,
+	        String telefono,
+	        String ciudad,
+	        String nombre_empresa,String tipo_empresa
+	) throws SQLException {
 
-		}
-		return useremp;
-	
-		}
+	    String sql = "INSERT INTO userempresa " +
+	                 "(nif, correo, telefono, ciudad, nombre_empresa, tipo_empresa) " +
+	                 "VALUES (?, ?, ?, ?, ?, ?)";
+
+	    PreparedStatement ps = lanzarInsert(sql);
+
+	    ps.setString(1, nif);
+	    ps.setString(2, correo);
+	    ps.setString(3, telefono);
+	    ps.setString(4, ciudad);
+	    ps.setString(5, nombre_empresa);
+	    ps.setString(6, tipo_empresa);
+		return null;
+
+	  
+	    }
+
+	    
 	}
+	

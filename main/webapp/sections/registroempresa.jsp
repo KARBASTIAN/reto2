@@ -11,7 +11,7 @@
 <h2>Formulario de Registro</h2>
 
 
-<form action="#" method="post">
+<form action="<%=request.getContextPath()%>/ServRegEmp" method="post">
 <label>
 Nombre de la empresa:
 <input type="text" name="empresa" required>
@@ -24,7 +24,7 @@ Tipo de empresa:
 <input type="text" name="tipo" required>
 </label>
 <br><br>
-
+<a><label>Nif</label><input type="text" id="nif" name="nif"></a>
 
 <label>
 Correo electrónico:

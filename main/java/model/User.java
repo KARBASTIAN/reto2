@@ -8,7 +8,12 @@ public class User  {
 
 	
 
-		private String nif,nombre,correo,telefono,ciudad,nombre_rol ;
+		private String nif ;
+		protected String nombre;
+		private String correo;
+		private String telefono;
+		private String ciudad;
+		private String nombre_rol;
 		private int id; //minutos
 		protected User(String nif, String nombre, String correo, String telefono, String ciudad, String nombre_rol,
 				int id) {
