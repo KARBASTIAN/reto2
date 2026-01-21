@@ -27,9 +27,12 @@ public class ServReg extends HttpServlet {
 		String ciudad = request.getParameter("ciudad");
 		String fecha_nacimiento = request.getParameter("nacimiento");
 		String genero = request.getParameter("genero");
-		String vehiculo = request.getParameter("vehiculo");
-		String discapacidad = request.getParameter("discapacidad");
+		boolean vehiculo = request.getParameter("vehiculo") != null;
+		boolean discapacidad = request.getParameter("discapacidad") != null;
 		String password = request.getParameter("pass");
+		
+		
+		
 		
 		
 		
