@@ -51,14 +51,14 @@ public class AccesoBD {
 		ResultSet rs = null;
 		st = con.createStatement();		
 		rs=st.executeQuery(sql);		
-		
 		return rs;
 		
 	}
-	public PreparedStatement lanzarInsert(String sql) throws SQLException {
-		PreparedStatement ps = null;
-		ps = con.prepareStatement(sql);
-		return ps;
+	public ResultSet lanzarInsert(String sql) throws SQLException {
+		ResultSet rs = null;
+		st = con.createStatement();		
+		rs=st.executeQuery(sql);		
+		return rs;
 	}
 	
 	public void disconnect() {

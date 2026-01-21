@@ -13,9 +13,8 @@ public class User  {
 		private String correo;
 		private String telefono;
 		private String ciudad;
-		private String nombre_rol;
 		private int id; //minutos
-		protected User(String nif, String nombre, String correo, String telefono, String ciudad, String nombre_rol,
+		protected User(String nif, String nombre, String correo, String telefono, String ciudad,
 				int id) {
 			super();
 			this.nif = nif;
@@ -23,7 +22,6 @@ public class User  {
 			this.correo = correo;
 			this.telefono = telefono;
 			this.ciudad = ciudad;
-			this.nombre_rol = nombre_rol;
 			this.id = id;
 		}
 		public String getNif() {
@@ -55,12 +53,6 @@ public class User  {
 		}
 		public void setCiudad(String ciudad) {
 			this.ciudad = ciudad;
-		}
-		public String getNombre_rol() {
-			return nombre_rol;
-		}
-		public void setNombre_rol(String nombre_rol) {
-			this.nombre_rol = nombre_rol;
 		}
 		public int getId() {
 			return id;

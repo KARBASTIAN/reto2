@@ -12,24 +12,23 @@ public class Voluntariado extends User{
 	private String pass;
 	
 	
-	Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad, String nombre_rol,
+	Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad, 
 			int id) {
-		super(nif, nombre, correo, telefono, ciudad, nombre_rol, id);
+		super(nif, nombre, correo, telefono, ciudad, id);
 
 		
 	}
 
 
-	public Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad, String nombre_rol,
-			int id, String apellidos, String genero, boolean vehiculo, boolean discapacidad, Date nacimiento,
-			String pass) {
-		super(nif, nombre, correo, telefono, ciudad, nombre_rol, id);
+	public Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad,
+			int id, String apellidos, String genero, boolean vehiculo, boolean discapacidad, Date nacimiento) {
+		super(nif, nombre, correo, telefono, ciudad, id);
 		this.apellidos = apellidos;
 		this.genero = genero;
 		this.vehiculo = vehiculo;
 		this.discapacidad = discapacidad;
 		this.nacimiento = nacimiento;
-		this.pass = pass;
+		
 	}
 
 
@@ -43,7 +42,7 @@ public class Voluntariado extends User{
 	}
 
 
-	public boolean isGenero() {
+	public String isGenero() {
 		return genero;
 	}
 
