@@ -59,16 +59,12 @@ public class VoluntariadoBD extends AccesoBD {
 	}
 	
 	public UserEmpresa registerEmpresa(
-	        String nif,
-	        String correo,
-	        String telefono,
-	        String ciudad,
-	        String nombre_empresa,String tipo_empresa
+	        String nif,String correo,String telefono,String ciudad,String nombre_empresa,String tipo_empresa, String pass
 	) throws SQLException {
-
+		
 	    String sql = "INSERT INTO userempresa " +
-	                 "(nif, correo, telefono, ciudad, nombre_empresa, tipo_empresa) " +
-	                 "VALUES (?, ?, ?, ?, ?, ?)";
+	                 "(nif, correo, telefono, ciudad, nombre_empresa, tipo_empresa,pass) " +
+	                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 	    PreparedStatement ps = lanzarInsert(sql);
 
@@ -78,7 +74,11 @@ public class VoluntariadoBD extends AccesoBD {
 	    ps.setString(4, ciudad);
 	    ps.setString(5, nombre_empresa);
 	    ps.setString(6, tipo_empresa);
+	    ps.setString(7, pass);
 		return null;
+		
+	    
+	    
 
 	  
 	    }
