@@ -58,6 +58,7 @@ public class AccesoBD {
 	public PreparedStatement lanzarInsert(String sql) throws SQLException {
 		PreparedStatement ps = null;
 		ps = con.prepareStatement(sql);
+		ps.executeUpdate();
 		return ps;
 	}
 	

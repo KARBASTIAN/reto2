@@ -29,7 +29,7 @@ public class ServRegEmp extends HttpServlet {
         String telefono = request.getParameter("telefono");
         String nif = request.getParameter("nif");
         String ciudad = request.getParameter("ciudad");
-        String password = request.getParameter("pass"); // (si luego lo usas)
+        String pass = request.getParameter("pass"); // (si luego lo usas)
 
         try {
             VoluntariadoBD bd = new VoluntariadoBD();
@@ -40,19 +40,11 @@ public class ServRegEmp extends HttpServlet {
                     telefono,
                     ciudad,
                     nombre_empresa,
-                    tipo_empresa
+                    tipo_empresa,
+                    pass
             );
-
-            if (empresa != null) {
-                // REGISTRO OK
-                request.getSession().setAttribute("empresa", empresa);
-                response.sendRedirect(request.getContextPath() + "/");
-            } else {
-                // REGISTRO FAIL
-                request.setAttribute("error", "No se pudo registrar la empresa");
-                request.getRequestDispatcher("/registerEmp")
-                       .forward(request, response);
-            }
+//no funciona
+         
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -61,4 +53,9 @@ public class ServRegEmp extends HttpServlet {
                    .forward(request, response);
         }
     }
-}
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    	doPost(request,response);
+    }
+    }
