@@ -49,7 +49,7 @@ User sessionUser = (User) session.getAttribute("user");
 					<% if (sessionUser == null) { %>
                 <div id="menuiniciarsesion" class="desplegableContenido">
                     <a href="<%=request.getContextPath()%>/sesionEN">Log in</a>
-                    <a href="registro.html">Volunteer registration</a>
+                    <a href="<%=request.getContextPath()%>/ServRegEn">Volunteer registration</a>
                     <a href="registro.html">Company registration</a>
                   	<% } else if (sessionUser instanceof Voluntariado) { %>
                    
