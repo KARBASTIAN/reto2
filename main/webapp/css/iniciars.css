@@ -22,7 +22,7 @@ body {
     background-color:#e8fae4;
     font-family: 'Open Sans', sans-serif; margin: 0;
     min-height: 100vh;
-    background-image: url('/assets/0bef3108-ff48-4c5a-b57d-3699f0adfa58.jpg');
+    background-image: url('../assets/0bef3108-ff48-4c5a-b57d-3699f0adfa58.jpg');
     background-size: cover;
 }
 header {

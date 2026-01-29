@@ -48,7 +48,7 @@
 
                         <div id="verdetallesboton_flechas">
                             <span class="flechaD">→</span>
-                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                             <span class="flechaI">←</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
 
                         <div id="verdetallesboton_flechas">
                             <span class="flechaD">→</span>
-                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                             <span class="flechaI">←</span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
 
                         <div id="verdetallesboton_flechas">
                             <span class="flechaD">→</span>
-                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
                             <span class="flechaI">←</span>
                         </div>
                     </div>
