@@ -54,12 +54,12 @@ public class AccesoBD {
 		return rs;
 		
 	}
-	public ResultSet lanzarInsert(String sql) throws SQLException {
-		ResultSet rs = null;
-		st = con.createStatement();		
-		rs=st.executeQuery(sql);		
-		return rs;
+	public void lanzarInsert(String sql) throws SQLException {
+		st.executeUpdate(sql);	
+	
+		
 	}
+
 	
 	public void disconnect() {
 		try {

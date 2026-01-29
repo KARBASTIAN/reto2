@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Nickelodeon';
+    src: url('../assets/Fonts/Butterpop.ttf');
+}
+@font-face {
+    font-family: 'MilkDays';
+    src: url('../assets/Fonts/Milk\ Days.otf');
+}
+
+@font-face {
+    font-family: 'Titulos';
+    src: url('../assets/Fonts/Blue\ Winter.otf');
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#e8fae4;
+    font-family: 'Open Sans', sans-serif; margin: 0;
+    min-height: 100vh;
+}
+
+
+
+    /*//////////////////// HEADER /////////////////////*/
+
+header {
+    width: 100%;
+    background-color: #67a867d3;                                    
+    padding: 10px;
+    padding-inline: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+}
+.header { 
+    display: flex;
+    color: #1b464b;
+}
+
+
+.logo:hover{transform: rotateY(360deg); transition-duration: 2s;}
+
+.logo img{
+    width: auto; /*se conecta con el height*/
+    height: 100px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    white-space: nowrap; /*el QUIENES SOMOS, en una linea*/
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'MilkDays';
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#evento_section_header{
+    display: flex;
+    margin-top: -2.5px;
+    animation-name: latidos;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes latidos {
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+nav a:hover {color:#95D400;}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-shadow: 2px 2px 4px rgb(214, 214, 214);
+}
+#logoh1{
+    color: #f6f6f6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Titulos';
+    padding-top: 5px;
+}
+a{text-decoration: none;}
+
+
+
+
+    /*////////////////////// DECORACIÓN DEL FONDO //////////////////////*/
+
+#general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#img1{
+    position: absolute;
+    width: 300px;
+    border-radius: 900%;
+    top: 200px;
+    left: 20px;
+    
+}
+
+#img2{
+    position: absolute;
+    width: 300px;
+    border-radius: 900%;
+    top: 500px;
+    left: 40px;
+    
+}
+
+#img3{
+    position: absolute;
+    width: 300px;
+    border-radius: 900%;
+    right: 50px;
+    top: 200px;
+}
+
+#img4{
+    position: absolute;
+    width: 300px;
+    border-radius: 900%;
+    right: 80px;
+    top: 600px;
+}
+
+    /*//////////////////// IMAGEN NOMBRE Y DESCRIPCIÓN /////////////////*/
+
+
+#imgnamedesc{
+    display: flex;
+    justify-content: space-between; /*Lo importante es esta linea con la linea de #divsderecha "flex-direction: column" y "flex-grow" para que ocupe todo*/
+    margin: 100px 200px 30px 200px;
+}
+
+#divsderecha{
+    display: flex;
+    flex-direction: column; /*IMPORTANTE*/
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    flex-grow: 1; /*IMPORTANTE. Luego de colocar el flex-grow para que ocupe todo, coloco un padding right porque no quiero que llegue a la derecha del todo*/
+    padding-right: 300px;
+}
+
+#agregarimg{
+    display: flex;
+    border: 2px solid rgb(99, 99, 99);
+    width: 400px;
+    height: 240px;
+}
+
+textarea {
+    width: 205%;
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño del contenedor */
+}
+
+#nombreevento{
+    font-size: 25px;
+    color: black;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    outline: none; /*asegura que no aparezca al hacer clic*/
+    resize: none; /*para quitar la opcion de redimencionar y quitar el iconito*/
+}
+
+#descripcionevento{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: 1px solid rgb(126, 126, 126);
+    outline: none; /*asegura que no aparezca al hacer clic*/
+    resize: none; /*para quitar la opcion de redimencionar y quitar el iconito*/
+}
+textarea::placeholder {color: gray;}
+
+
+    /*//////////////// RESTO DE DATOS ////////////////*/
+
+#restodatos{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 200px 100px 200px;
+    font-size: 25px;
+}
+
+.fdatosn{
+    display: flex;
+    align-items: center;
+}
+
+.fdatosn label{
+    width: 420px;
+    padding: 5px;
+}
+
+.fdatosn input{
+    width: 600px;
+    height: 30px;
+}
+
+.fdatosn select{
+    width: 600px;
+    height: 30px;
+}
+
+
+
+
+
+     /* /////////////// FOOTER ////////////////// */
+.footer {
+    background-color: #67a867d3;
+    color: #1b464b;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #1b464b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+main{
+    flex: 1;
+    width: 100%;
+}

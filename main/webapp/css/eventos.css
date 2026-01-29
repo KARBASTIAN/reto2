@@ -1,9 +1,26 @@
-/* 1. Tipografía y Estructura General */
+@font-face {
+    font-family: 'portada';
+    src: url('../assets/Fonts/Butterpop.ttf');
+}
+@font-face {
+    font-family: 'nav';
+    src: url('../assets/Fonts/Milk\ Days.otf');
+}
+@font-face {
+    font-family: 'titulos';
+    src: url('../assets/Fonts/Blue\ Winter.otf');
+}
+
+:root{
+    --llaollao: #95d400;
+    --blanco: #f6f6f6;
+}
+
+/*Tipografía y Estructura General */
 body {
     font-family: 'Open Sans', sans-serif; margin: 0;
-    
     padding: 0;
-    background-color: #1b464b;
+    background-color: #f6f6f6;
     color: #ACC1C2;
     /* Necesario para que el footer se quede abajo*/
     min-height: 100vh;
@@ -15,102 +32,71 @@ main {
     flex-grow: 1;
 }
 
-/* Estilos del Header */
-.main-header {
-    background-color: #405f63ef;
-    padding-inline: 20px;
+
+
+     /* /////////////////////// HEADER /////////////////////// */
+
+header {
+    background-color: #67a867d3;                                    
+    padding: 10px;
+    padding-inline: 25px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0;
-    z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+}
+.header { 
+    display: flex;
+    color: #1b464b;
+}
+
+.logo{
     display: flex;
     flex-direction: row;
-    color: #1b464b;
-    text-shadow: 2px 2px 4px rgb(214, 214, 214);
+}
+.logo:hover{transform: rotateY(360deg); transition-duration: 2s;}
+
+.logo img{
+    width: auto; /*se conecta con el height*/
+    height: 100px;
 }
 
-.letras{
-    display: flex;
-    flex-direction: row;
-    color: #1b464b;
-    text-shadow: 2px 2px 4px rgb(214, 214, 214);
-    width: 100%;
-    margin-right: 500px;
-    
-   
+#logoh1{
+    color: #f6f6f6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
-.header-right-content { 
-    display: flex;
-    color: #1b464b;
-}
-
-.main-nav{
+nav{
     display: flex;
     align-items: center;
 }
 
-
-
-/* Estilos de la Navegación */
-.main-nav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     white-space: nowrap; /*el QUIENES SOMOS, en una linea*/
+    margin-right: 50px;
 }
 
-
-
-.main-nav a {
+nav a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 400;
+    font-family: 'nav';
+    letter-spacing: 1px;
     font-size: 1rem;
     padding: 5px 10px;
     transition: color 0.3s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.main-nav a:hover {
-    color:#537679;
-}
+nav a:hover {color:#95D400;}
 
-
-/* Estilos del Footer */
-.main-footer {
-    background-color: #a3b6b7;
-    color: #1b464b;
-    text-align: center;
-    padding: 3px;
-    font-size: 0.9rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.main-footer p {
-    margin: 5px 0;
-}
-
-.main-footer a {
-    color: #1b464b;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.main-footer a:hover {
-    text-decoration: underline;
-}
-
-/*LOGO MAS H1 DEL LOGO*/
 .logo{
     display: flex;
     flex-direction: row;
-    color: #1b464b;
     text-shadow: 2px 2px 4px rgb(214, 214, 214);
 }
 
@@ -120,290 +106,16 @@ main {
 }
 
 
-
-
-/* Estilos para Misión y Visión */
-.equipo-enlace{
-    background-color: #a3b6b7;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #ffffff;
-    
-}
-.mision-vision-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    padding: 15px 5%;
-    gap: 30px; 
-    background-color: #537679; 
-    text-align: center;
-    padding-bottom: 5%;
-    scroll-margin-top: 87px;
-}
-#h1Q {
-    text-align: center; 
-    width: 100%;
-    margin-bottom: 1px; 
-    color: #ffffff; 
-    font-size: 140%; 
-}
-.mision-vision-card:hover {
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.527), 0 0 10px rgba(172, 193, 194, 0.1); 
-}
-
-
-.mision-vision-card {
-    flex: 1 1 45%; 
-    max-width: 450px;
-
-    
-    /* Estilo de la tarjeta */
-    background-color: #405f63;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    min-height: 250px;
-}
-
-.card-title {
-    color: #a3b6b7;
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ACC1C2;
-    padding-bottom: 10px;
-    
-}
-
-.card-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ACC1C2;
-    text-align: left;
-}
-
-.mision-vision-card {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    min-height: 250px;
-}
-
-
-.contact-section {
-    padding: 60px 5%;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    scroll-margin-top: 87px;
-}
-
-.contact-title {
-    color: #a3b6b7;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #a3b6b7;
-    padding-bottom: 10px;
-}
-
-.contact-subtitle {
-    color: #ACC1C2;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    background-color: #24585f;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: left;
-}
-
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: #a3b6b7;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ACC1C2;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #1b464b;
-    color: #ACC1C2;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    resize: vertical;
-}
-
-.faq-section {
-    padding: 50px 5%; 
-    max-width: 900px; 
-    margin: 0 auto;
-    scroll-margin-top: 87px;
-}
-
-.faq-section h2 {
-    color: #a3b6b7;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 3px solid #ACC1C2;
-    padding-bottom: 10px;
-}
-
-.faq-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
-}
-
-.faq-item {
-    background-color: #24585f;
-    border-radius: 8px;
-    padding: 0;
-    transition: background-color 0.3s ease;
-}
-
-/* Se oscurece al abrir */
-.faq-item[open] {
-    background-color: #1b464b;
-}
-
-/* Estilo para la pregunta */
-.faq-question {
-    display: block;
-    cursor: pointer;
-    padding: 20px 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #ACC1C2;
-    list-style: none;
-    position: relative;
-    user-select: none;
-}
-
-/* Ocultar el marcador por defecto en todos los navegadores */
-.faq-item > summary::-webkit-details-marker, 
-.faq-item > summary::marker {
-    display: none;
-}
-
-/* Ícono de flecha */
-.faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 25px;
-    width:0%;
-    margin-top:-1%;
-    font-size: 1.5rem;
-    font-weight: 300;
-    transition: transform 0.3s;
-}
-
-.faq-item[open] .faq-question::after {
-    content: '—';
-    transform: rotate(0deg); 
-}
-
-
-/* Estilo para la respuesta */
-.faq-answer {
-    padding: 0 25px 20px 25px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #e0ecee;
-    margin-top: 0;
-}
-
-/*Estilos de voluntariado*/
-.voluntariado-section {
-    display: flex; 
-    width: 111.1%;
-    margin-left: -5.6%;
-    justify-content: center; 
-    gap: 30px;
-    background: url(/assets/TRiatlon-Valencia-2011-152_lowres.jpg) center;
-    scroll-margin-top: 87px;
-    
-    
- }
-
-    .voluntariado-card {
-        flex: 1 1 45%; 
-        max-width: 450px;
-        /* Estilo de la tarjeta */
-        margin-block: 12%;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        min-height: 250px; 
-        background-color: hsla(185, 43%, 21%, 0.8);
-        padding-top: 3%;
-    }
-    .card-title {
-        color: #ffffff;
-        font-size: 1.8rem;
-        margin-top: 0;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #ffffff;
-        padding-bottom: 10px;
-        text-align: center;
-    }
-    
-    .card-text {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #ffffff;
-        padding-inline: 6%;
-        padding-bottom: 6%;
-        text-align:left;
-    }
-    #enlacep, #enlacep:visited{
-        text-decoration: none;
-        color: #ffffff;
-    }
-    
-
-    .voluntariado-card:hover {
-        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.527), 0 0 10px rgba(172, 193, 194, 0.1); 
-        cursor: pointer;
-    }
-
-    .mision-vision-container .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-top: 2rem;
-        margin-bottom: 1.5rem;
-        color: white;
-        width: 100%;
-    }
-
-  
+ /*////////// EVENTOS SECCION /////////*/
 
   .eventos-section {
     padding: 30px 5%;
-    background-color: #537679;
+    background-color: #669A64;
     text-align: center;
     scroll-margin-top: 87px;
-    
 }
 
-.section-title-eventos {
+.titulo_eventos {
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
@@ -413,33 +125,35 @@ main {
     display: inline-block;
 }
 
-/* Galería de Eventos */
+/* /////////////////////// TARJETAS DE EVENTOS ///////////////////////// */
 
-.event-gallery {
+.galeria {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 30px; 
+    gap: 80px; 
     max-width: 1200px;
     margin: 0 auto 60px auto;
 }
 
-.event-card {
+
+.evento_tarjeta {
     flex: 1 1 300px; 
     max-width: 350px;
-    background-color: #405f63;
+    background-color: #f6f6f6;
     border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    text-align: center;
 }
 
-.event-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+.evento_tarjeta:hover {
+    box-shadow: 0 8px 30px white;
+    transform: scale(1.01);
 }
 
-.event-image {
+.imagen_evento {
     width: 100%;
     height: 200px; 
     object-fit: cover; 
@@ -451,35 +165,59 @@ main {
 }
 
 .event-info h3 {
-    color: #a3b6b7;
+    color: #3c413c;
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.4rem;
+    
 }
 
 .event-info p {
-    color: #ACC1C2;
+    color: #000000;
     font-size: 0.95rem;
     margin-bottom: 15px;
 }
 
 .join-button {
     display: inline-block;
+    justify-content: center;
     padding: 10px 15px;
-    background-color: #1b464b;
-    color: #a3b6b7;
+    background-color: #669A64;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
-    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
+    
 }
+.join-button:hover {transform: scale(1.1);}
 
-.join-button:hover {
-    background-color: #ACC1C2;
+
+
+/* /////////////// FOOTER ////////////////// */
+
+.footer {
+    background-color: #67a867d3;
     color: #1b464b;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.footer p {
+    margin: 5px 0;
+}
 
-a{
+.footer a {
+    color: #1b464b;
     text-decoration: none;
+    margin: 0 5px;
 }
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+a{text-decoration: none;}

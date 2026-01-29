@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Nickelodeon';
+    src: url('../assets/Fonts/Butterpop.ttf');
+}
+@font-face {
+    font-family: 'MilkDays';
+    src: url('../assets/Fonts/Milk\ Days.otf');
+}
+
+@font-face {
+    font-family: 'Titulos';
+    src: url('../assets/Fonts/Blue\ Winter.otf');
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#e8fae4;
+    font-family: 'Open Sans', sans-serif; margin: 0;
+    min-height: 100vh;
+    background-image: url('/assets/0bef3108-ff48-4c5a-b57d-3699f0adfa58.jpg');
+    background-size: cover;
+}
+header {
+    width: 100%;
+    background-color: #67a867d3;                                    
+    padding: 10px;
+    padding-inline: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+}
+.header { 
+    display: flex;
+    color: #1b464b;
+}
+
+main{
+    flex: 1;
+    width: 100%;
+}
+ img:hover{transform: rotateY(360deg); transition-duration: 2s;}
+
+.logo img{
+    width: auto; /*se conecta con el height*/
+    height: 100px;
+    
+
+}
+    .logo:hover {
+        transform: rotateY(360deg);
+        transition-duration: 2s;
+    }
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    white-space: nowrap; /*el QUIENES SOMOS, en una linea*/
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'MilkDays';
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#evento_section_header{
+    display: flex;
+    margin-top: -2.5px;
+    animation-name: latidos;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes latidos {
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+    
+}
+nav a:hover {
+    color:#95D400;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-shadow: 2px 2px 4px rgb(214, 214, 214);
+}
+#logoh1{
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    color: #f6f6f6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+a{text-decoration: none;}
+
+
+  
+  .logoytitulo{      
+    text-align: center;
+    gap:10px;
+}
+
+h1{
+    color: #67a867d3;
+    font-family: 'Titulos';
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px #bdf5c0;
+    animation-name: opacityh2;
+    animation-duration: 2s;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    background-color:#7DB67C;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 28px;
+    margin: 5px;
+}
+
+input{
+    font-size: 26px;
+    width: 60%;
+    margin: 10px;
+    border-radius: 20px;
+    border: 3px  #537679 solid;
+    outline: none;
+}
+
+.enter{
+    margin-top: 20px;
+    width: 22%;
+    padding-block: 2px;
+}
+
+.enter:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+    box-shadow: 2xp 2px 2px  white;
+    color: white;
+    background-color: #95D400;
+}
+
+.b_reg{
+    position:relative ;
+    right: 11px;
+    width: 100%;
+    padding-bottom: 2px;
+}
+
+.b_reg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+    box-shadow: 2xp 2px 2px  white;
+    color: white;
+    background-color: #95D400;
+}
+
+.footer {
+    background-color: #67a867d3;
+    color: #1b464b;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #1b464b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    form {
+        width: 90%;
+    }
+
+    #datos {
+        grid-template-columns: 1fr;
+    }
+
+    #datos label {
+        text-align: left;
+    }
+}

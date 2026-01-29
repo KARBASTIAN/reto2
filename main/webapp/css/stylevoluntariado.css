@@ -30,7 +30,7 @@ main {
 
 
 
-.header-right-content { 
+.header { 
     display: flex;
     color: #1b464b;
 }

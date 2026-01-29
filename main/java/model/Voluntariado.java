@@ -9,27 +9,25 @@ public class Voluntariado extends User{
 	String genero;
 	private boolean vehiculo, discapacidad;
 	private Date nacimiento;
-	private String pass;
 	
 	
-	Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad, 
-			int id) {
-		super(nif, nombre, correo, telefono, ciudad, id);
+	
+	
+
 
 		
-	}
-
-
-	public Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad,
-			int id, String apellidos, String genero, boolean vehiculo, boolean discapacidad, Date nacimiento) {
-		super(nif, nombre, correo, telefono, ciudad, id);
+	public Voluntariado(String nif, String nombre, String correo, String telefono, String ciudad, int id, String pass,
+			String id_roles, String apellidos, String genero, boolean vehiculo, boolean discapacidad, Date nacimiento) {
+		super(nif, nombre, correo, telefono, ciudad, id, pass, id_roles);
 		this.apellidos = apellidos;
 		this.genero = genero;
 		this.vehiculo = vehiculo;
 		this.discapacidad = discapacidad;
 		this.nacimiento = nacimiento;
-		
 	}
+
+
+	
 
 
 	public String getApellidos() {
@@ -57,13 +55,20 @@ public class Voluntariado extends User{
 	}
 
 
-	public void setVehiculo(boolean vehiculo) {
-		this.vehiculo = vehiculo;
+public String getVehiculo() {
+		
+		return (discapacidad)?"1":"0";
+			
 	}
 
 
 	public boolean isDiscapacidad() {
 		return discapacidad;
+	}
+	public String getDiscapacidad() {
+		
+		return (discapacidad)?"1":"0";
+			
 	}
 
 
@@ -82,15 +87,14 @@ public class Voluntariado extends User{
 	}
 
 
-	public String getPass() {
-		return pass;
-	}
-
-
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-
 	
+
+	@Override
+	public String toString() {
+		return "Voluntariado [apellidos=" + apellidos + ", genero=" + genero + ", vehiculo=" + vehiculo
+				+ ", discapacidad=" + discapacidad + ", nacimiento=" + nacimiento +  "]";
+	}
+
+
 	
 }

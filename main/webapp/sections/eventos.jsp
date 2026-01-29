@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<%@page contentType="text/html; charset=UTF-8"  %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,17 @@
     
 
     <main>
+
+
+    <!--///////////////// EVENTOS SECCION ////////////////////////////////-->
+
         <section id="eventos" class="eventos-section">
-            <h2 class="section-title-eventos">Próximos Eventos</h2>
+            <h2 class="titulo_eventos">TODOS LOS EVENTOS</h2>
 
-            <div class="event-gallery">
+            <div class="galeria">
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestación" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestación" class="imagen_evento">
                     <div class="event-info">
                         <h3>Bicicletas en la Ciudad</h3>
                         <p>Sábado, 15 Noviembre | Plentzia</p>
@@ -30,8 +34,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Marat�n-de-Valencia.jpg" alt="Evento Limpieza Playas" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Maratón-de-Valencia.jpg" alt="Evento Limpieza Playas" class="imagen_evento">
                     <div class="event-info">
                         <h3>Maratón por la Vida</h3>
                         <p>Domingo, 23 Noviembre | Gorliz</p>
@@ -39,8 +43,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Maratón Solidario" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Maratón Solidario" class="imagen_evento">
                     <div class="event-info">
                         <h3>Corre y no mires atrás</h3>
                         <p>Sábado, 6 Diciembre | Ereaga</p>
@@ -48,8 +52,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Bici01.jpg" alt="Evento Reforestación" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Bici01.jpg" alt="Evento Reforestación" class="imagen_evento">
                     <div class="event-info">
                         <h3>Tour por Bizkaia</h3>
                         <p>Martes, 29 Noviembre | Madrid</p>
@@ -57,8 +61,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/running01.jpg" alt="Evento Limpieza Playas" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/running01.jpg" alt="Evento Limpieza Playas" class="imagen_evento">
                     <div class="event-info">
                         <h3>Media maratón</h3>
                         <p>Miercoles, 6 diciembre | Bilbao</p>
@@ -66,8 +70,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Bici02.jpg" alt="Maratón Solidario" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Bici02.jpg" alt="Maratón Solidario" class="imagen_evento">
                     <div class="event-info">
                         <h3>Triatlón</h3>
                         <p>Sábado, 6 Diciembre | Francia</p>
@@ -75,8 +79,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Bici03.jpg" alt="Evento Reforestación" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Bici03.jpg" alt="Evento Reforestación" class="imagen_evento">
                     <div class="event-info">
                         <h3>Vuelta ciclista</h3>
                         <p>Sábado, 10 Diciembre | Barcelona</p>
@@ -84,8 +88,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Bici04.jpg" alt="Evento Limpieza Playas" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Bici04.jpg" alt="Evento Limpieza Playas" class="imagen_evento">
                     <div class="event-info">
                         <h3>Trail nocturno</h3>
                         <p>Viernes, 12 Diciembre | Bilbao</p>
@@ -93,8 +97,8 @@
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/running02.jpg" alt="Maratón Solidario" class="event-image">
+                <article class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/running02.jpg" alt="Maratón Solidario" class="imagen_evento">
                     <div class="event-info">
                         <h3>Ultra maratón 100km</h3>
                         <p>Sábado, 17 Diciembre | País Vasco</p>

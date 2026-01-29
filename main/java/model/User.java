@@ -14,8 +14,10 @@ public class User  {
 		private String telefono;
 		private String ciudad;
 		private int id; //minutos
+		private String pass;
+		private String id_roles;
 		protected User(String nif, String nombre, String correo, String telefono, String ciudad,
-				int id) {
+				int id,String pass, String id_roles) {
 			super();
 			this.nif = nif;
 			this.nombre = nombre;
@@ -23,6 +25,20 @@ public class User  {
 			this.telefono = telefono;
 			this.ciudad = ciudad;
 			this.id = id;
+			this.pass = pass;
+			this.id_roles = id_roles;
+		}
+		public String getId_roles() {
+			return id_roles;
+		}
+		public void setId_roles(String id_roles) {
+			this.id_roles = id_roles;
+		}
+		public String getPass() {
+			return pass;
+		}
+		public void setPass(String pass) {
+			this.pass = pass;
 		}
 		public String getNif() {
 			return nif;

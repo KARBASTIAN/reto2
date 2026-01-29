@@ -27,13 +27,17 @@ public class ServLogin extends HttpServlet {
 
 	try {
 		VoluntariadoBD bd = new VoluntariadoBD();
+		
+		
 		User sessionUser = bd.getusuario(correo, pass);
+		
+		
 
 		if (sessionUser != null) {
 			// LOGIN OK: A la home
 			request.getSession().setAttribute("user", sessionUser);
 			request.getSession().setAttribute("success", "Credenciales correctas: Estás en la lista de la FIA");
-			response.sendRedirect(request.getContextPath() + "/");
+			response.sendRedirect(request.getContextPath() + "/home");
 		} else {
 			// LOGIN FAIL: Al form de login (vía forward para pasar el error)
 			request.setAttribute("error", "Acceso denegado: CREDENCIALES INCORRECTAS");

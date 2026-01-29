@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@page contentType="text/html; charset=UTF-8"  %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,8 +27,8 @@
                     <img src="<%=request.getContextPath()%>/assets/licenciado.jpg">
                 </a>
                 <h3>Sebastian Mina</h3>
-                <p class="descripcion">Soy una persona que siempre lleva buenas relaciones con las personas, sé
-                    escuchar y comprender a las personas así como hacer que me entiendan.
+                <p class="descripcion">Soy una persona que siempre lleva buenas relaciones con las personas, sÃ©
+                    escuchar y comprender a las personas asÃ­ como hacer que me entiendan.
                     Tengo una actitud positiva y perseverancia para lograr objetivos sin
                     importar las dificultades, dispuesto a el aprendizaje constante y con alto
                     grado de responsabilidad</p>
@@ -37,10 +37,10 @@
                 <a href="<%=request.getContextPath()%>/assets/Santicv.pdf" target="_blank">
                     <img src="<%=request.getContextPath()%>/assets/Santi.jpg">
                 </a>
-                <h3>Santiago Muñoz</h3>
-                <p class="descripcion"> Gestión de equipos y liderazgo, Estrategias de venta, comunicación y atención al
-                    cliente Dominio de herramientas tecnológicas y plataformas de gestión Adaptabilidad y aprendizaje
-                    rápido</p>
+                <h3>Santiago MuÃ±oz</h3>
+                <p class="descripcion"> GestiÃ³n de equipos y liderazgo, Estrategias de venta, comunicaciÃ³n y atenciÃ³n al
+                    cliente Dominio de herramientas tecnolÃ³gicas y plataformas de gestiÃ³n Adaptabilidad y aprendizaje
+                    rÃ¡pido</p>
             </div>
             <div class="miembro">
                 <a href="<%=request.getContextPath()%>/assets/IBAI CAPITAN.pdf" target="_blank">
@@ -48,7 +48,7 @@
                 </a>
                 <h3>Ibai Capitan</h3>
                 <p class="descripcion">Me gusta trabajar en equipo, donde puedo compartir
-                    ideas y colaborar con mis compañeros, pero también
+                    ideas y colaborar con mis compaÃ±eros, pero tambiÃ©n
                     disfruto de los momentos en solitario, en los que puedo
                     concentrarme y liberar mi creatividad</p>
             </div>
@@ -57,20 +57,20 @@
                     <img src="<%=request.getContextPath()%>/assets/Or.jpg">
                 </a>
                 <h3>Oroitz Alkorta</h3>
-                <p class="descripcion"> Apasionado por la programación, el diseño web y
-                    las nuevas tecnologías. Persona proactiva,
+                <p class="descripcion"> Apasionado por la programaciÃ³n, el diseÃ±o web y
+                    las nuevas tecnologÃ­as. Persona proactiva,
                     con facilidad para aprender, trabajar en equipo y
                     comunicarse en varios idiomas</p>
             </div>
             <div class="miembro">
-                <a href="<%=request.getContextPath()%>/assets/Aimar Valiño.pdf" target="_blank">
+                <a href="<%=request.getContextPath()%>/assets/Aimar ValiÃ±o.pdf" target="_blank">
                     <img src="<%=request.getContextPath()%>/assets/Aimarr.jpg">
                 </a>
-                <h3>Aimar Valiño</h3>
+                <h3>Aimar ValiÃ±o</h3>
                 <p class="descripcion">Soy una persona organizada y responsable, con excelentes relaciones
                     interpersonales.
                     Con experiencia en INETUM de practicas, me destaco por el buen trabajo en equipo, la
-                    rápida toma de decisiones y el buen manejo de la presión.</p>
+                    rÃ¡pida toma de decisiones y el buen manejo de la presiÃ³n.</p>
             </div>
         </div>
 

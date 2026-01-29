@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.User;
 import model.Voluntariado;
 import model.VoluntariadoBD;
+
 
 /**
  * Servlet implementation class ServReg
@@ -21,22 +23,33 @@ import model.VoluntariadoBD;
 public class ServReg extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setAttribute("view","/sections/Registro_Voluntariado.jsp");
+		request.getRequestDispatcher("./layout.jsp").forward(request, response);
+	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String nombre = request.getParameter("name");
+		String nombre = request.getParameter("nombre");
 		String apellidos = request.getParameter("apellidos");
 		String nif= request.getParameter("nif");
-		String correo = request.getParameter("correo");
+		String correo = request.getParameter("femails");
 		String telefono = request.getParameter("telefono");
 		String ciudad = request.getParameter("ciudad");
-		String fecha_nacimiento = request.getParameter("nacimiento");
+		String fecha_nacimiento = request.getParameter("fecha_nacimiento");
+		java.sql.Date nacimiento = null;
+		if (fecha_nacimiento != null && !fecha_nacimiento.isEmpty()) {
+		    nacimiento = java.sql.Date.valueOf(fecha_nacimiento);
+		}
 		String genero = request.getParameter("genero");
-		boolean vehiculo = request.getParameter("vehiculo") != null;
-		boolean discapacidad = request.getParameter("discapacidad") != null;
-		String password = request.getParameter("pass");
+		String vehiculo="0";
+		if (request.getParameter("vehiculo").equals("si")) vehiculo="1";
+		String discapacidad="0";
+		if (request.getParameter("discapacidad").equals("si")) discapacidad="1";
+		String pass = request.getParameter("password");
+		String id_rol="2";
+		
 		
 		
 		
@@ -47,25 +60,18 @@ public class ServReg extends HttpServlet {
 		try {
 			VoluntariadoBD bd = new VoluntariadoBD();
 			
-			//generrar voluntario (Voluntario v =... lo de arriba
+			//generar voluntario (Voluntario v =... lo de arriba
 			
-			Voluntariado v = null;
+			Voluntariado v = new Voluntariado(nif, nombre, correo, telefono, ciudad, 0, pass, id_rol, apellidos, genero, Boolean.parseBoolean(vehiculo), 
+					Boolean.parseBoolean(discapacidad), nacimiento);
+			
 			
 			//registrar voluntario
 			
 			bd.registrarVoluntario(v);
 			
 			
-			
-	    Class.forName("com.mysql.cj.jdbc.Driver");
-
-	    Connection con = DriverManager.getConnection(
-	        "jdbc:mysql://localhost:3306/voluntariadoBD?serverTimezone=UTC", "root", "z");
-
-	    System.out.println("Conexión exitosa");
-	    
-	    con.prepareStatement("insert into usuariosVolun VALUES" + nombre + apellidos + nif + correo + telefono + ciudad + fecha_nacimiento + genero +
-	    		vehiculo + discapacidad + password);
+		
 	    
 	  
 

@@ -1,9 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<%@page contentType="text/html; charset=UTF-8"  %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTUM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
+</head>
 
+<body>
 
-
-    
+   
     <main>
 
+        <!--/////////////////////// PORTADA ///////////////////////////////-->
         <section class="portada">
 
             <!--Aqui va el video de fondo de la portada-->
@@ -11,221 +24,132 @@
                 <source src="<%=request.getContextPath()%>/assets/FondoBorroso.mp4" type="video/mp4">
             </video>
 
-            <div class="conteido">
-                <h1>VOLUWORLD</h1>
-                <p class="eslogan">M�S QUE UN EVENTO, UNA ACCI�N</p>
+            <div>
+                <h1>EVENTUM</h1>
+                <p class="eslogan">MÁS QUE UN EVENTO, UNA ACCIÓN</p>
             </div>
         </section>
 
 
 
+
+        <!--/////////////////////// EVENTOS SECCION ///////////////////////////////-->
+
         <section id="eventos" class="eventos-section">
-            <h2 class="section-title-eventos">Pr�ximos Eventos</h2>
+            <h2 class="titulo_seccion_eventos">NUESTROS EVENTOS MÁS TOP</h2>
 
             <div class="event-gallery">
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestaci�n" class="event-image">
+                <article id="tarjeta_evento_one" class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/bici.jpg" alt="Evento Reforestación" class="event-image">
                     <div class="event-info">
                         <h3>Bicicletas en la Ciudad</h3>
                         <p>Sábado, 15 Noviembre | Plentzia</p>
-                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
+
+                        <div id="verdetallesboton_flechas">
+                            <span class="flechaD">→</span>
+                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <span class="flechaI">←</span>
+                        </div>
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/assets/Marat�n-de-Valencia.jpg" alt="Evento Limpieza Playas" class="event-image">
+                <article id="tarjeta_evento_two" class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/Maratón-de-Valencia.jpg" alt="Evento Limpieza Playas" class="event-image">
                     <div class="event-info">
                         <h3>Maratón por la Vida</h3>
                         <p>Domingo, 23 Noviembre | Gorliz</p>
-                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
+
+                        <div id="verdetallesboton_flechas">
+                            <span class="flechaD">→</span>
+                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <span class="flechaI">←</span>
+                        </div>
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="<%=request.getContextPath()%>/eventos" alt="Marat�n Solidario" class="event-image">
+                <article id="tarjeta_evento_three" class="evento_tarjeta">
+                    <img src="<%=request.getContextPath()%>/assets/FotoNoticia.jpg" alt="Maratón Solidario" class="event-image">
                     <div class="event-info">
-                        <h3>Corre y no mires atr�s</h3>
-                        <p>S�bado, 6 Diciembre | Ereaga</p>
-                        <a href="<%=request.getContextPath()%>/eventos" class="join-button">Ver Detalles</a>
+                        <h3>Corre y no mires atrás</h3>
+                        <p>Sábado, 6 Diciembre | Ereaga</p>
+
+                        <div id="verdetallesboton_flechas">
+                            <span class="flechaD">→</span>
+                            <a href="eventos.html" class="join-button">Ver Detalles</a>
+                            <span class="flechaI">←</span>
+                        </div>
                     </div>
                 </article>
             </div>
-            <a href="<%=request.getContextPath()%>/eventos"><button class="boton_evento">VER M��S</button></a>
+            <a href="<%=request.getContextPath()%>/eventos"><button class="boton_evento">VER TODOS</button></a>
         </section>
 
 
 
+        <!--/////////////////////// VOLUNTARIO ORGANIZADOR SECCION ///////////////////////////////-->
 
-        <section class="voluntariado-section" id="voluntariado">
+        <section id="voluntario_organizador">
 
-            <a href="<%=request.getContextPath()%>/volES" id="enlacep">
-                <div class="voluntariado-card">
+            <div id="eres_voluorga">
+                <h2 id="eres_voluntario">¿ERES VOLUNTARIO?</h2>
+                <h2 id="eres_organizador">¿ERES ORGANIZADOR?</h2>
+            </div>
 
-                    <h2 class="card-title">Voluntariado</h2>
-                    <p class="card-text">
-                        Los voluntarios son el coraz�n de cada evento. Su dedicaci�n, energ�a y compromiso hacen
-                        posible
-                        que
-                        todo funcione a la perfecci�n. Participar como voluntario no solo significa ayudar, sino
-                        tambi�n
-                        formar parte de una comunidad solidaria, compartir experiencias �nicas y crecer personal y
-                        profesionalmente.
+                <img src="<%=request.getContextPath()%>/assets/voluntario_organizador.jpg" alt="voluntario_organizadorJPG" id="voluntario_organizador_img">
 
-                        Cada voluntario cumple un rol esencial dentro de la organizaci�n: algunos se encargan de la
-                        acogida
-                        y atenci�n al p�blico, otros colaboran en montaje y desmontaje de espacios, gesti�n de
-                        materiales,
-                        apoyo técnico o coordinación de actividades. También hay quienes ayudan en comunicaci�n,
-                        fotografía
-                        o redes sociales, contribuyendo a difundir el impacto del evento.
+               <a href="<%=request.getContextPath()%>/ServReg"><button id="registrate_volu">REGISTRARSE</button></a> <!--No estoy seguro de si el onclik y como está sea la manera correcta de hacerlo-->
+               <a href="<%=request.getContextPath()%>/ServRegEmp"><button id="registrate_orga">REGISTRARSE</button></a>                                              <!--pero no puedo meter un <a> porque tengo position relative al button-->
 
-                    </p>
-                </div>
-            </a>
         </section>
 
 
+        <!--/////////////////////// ODS SECCION ///////////////////////////////-->
+        <div id="divods">
+		
+        
+            <h2 id="odstitle">CONOCE NUESTROS ODS</h2>
+            <section id="ods-section">
+            
+                <article class="articleods"><img class="odsimg" id="odsimg1" src="<%=request.getContextPath()%>/assets/ods/ods3.png" alt="ODS 3">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/salud_y_bienestar_hover.jpg" alt="">
+                </article>
 
+                <article class="articleods"><img class="odsimg" id="odsimg2" src="<%=request.getContextPath()%>/assets/ods/ods5.png" alt="ODS 5">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/igualdad_genero_hover.jpg" alt="">
+                </article>
 
-        <section class="mision-vision-container" id="quienesSomos">
-            <h1 id="h1Q">QUIÉNES SOMOS</h1>
+                <article class="articleods"><img class="odsimg" id="odsimg3" src="<%=request.getContextPath()%>/assets/ods/ods11.png" alt="ODS 11">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/ciudades_sostenibles_hover.jpg" alt="">
+                </article>
 
+                <article class="articleods"><img class="odsimg" id="odsimg4" src="<%=request.getContextPath()%>/assets/ods/ods13.png" alt="ODS 13">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/accion_clima_hover.jpg" alt="">
+                </article>
 
-            <div class="mision-vision-card" id="vision">
-                <h2 class="card-title">Visión</h2>
-                <p class="card-text">
-                    Ser la plataforma que conecta el propósito con la acción, uniendo a personas y organizaciones
-                    para
-                    transformar la manera en que vivimos los eventos y el voluntariado. Aspiramos a construir una
-                    comunidad
-                    global donde cada experiencia inspire, motive y despierte el deseo de cambiar el mundo. Queremos
-                    ser
-                    el
-                    punto de encuentro donde la innovación, la esperanza y los sueños se convierten en realidades
-                    compartidas, impulsando una nueva forma de crear impacto con pasión, propósito y grandeza.
-                </p>
-            </div>
+                <article class="articleods"><img class="odsimg" id="odsimg5" src="<%=request.getContextPath()%>/assets/ods/ods15.jpg" alt="ODS 15">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/vida_ecosistemas_hover.jpg" alt="">
+                </article>
 
-            <div class="mision-vision-card" id="mision">
-                <h2 class="card-title">Misión</h2>
-                <p class="card-text">
-                    Redefinir el voluntariado y la gestión de eventos a través de una plataforma dinámica,
-                    interactiva y
-                    con un modelo de juego único que transforma cada acción en una experiencia motivadora.
-                    Facilitamos
-                    el
-                    encuentro entre organizadores visionarios y voluntarios con espíritu ganador, ofreciendo
-                    herramientas
-                    intuitivas, retos, recompensas y una comunidad vibrante donde la colaboración se vive como una
-                    aventura.
-                    Nuestra misión es demostrar que ayudar también puede ser emocionante, que conectar puede ser
-                    inspirador
-                    y que juntos podemos convertir lo ordinario en algo verdaderamente extraordinario.
-                </p>
-            </div>
-            <div class="equipo-enlace" id="equipo">
-                <a href="<%=request.getContextPath()%>/cves" target="_blank">
-                    <em>Conócenos</em>
-                </a>
-            </div>
-
-        </section>
-    
-
-
-
-
-
-
-    <section class="contact-section" id="contacto">
-        <h2 class="contact-title">Contáctanos en VOLUWORLD</h2>
-        <p class="contact-subtitle">¿Tienes dudas o quieres colaborar? Déjanos un mensaje.</p>
-
-        <form class="contact-form" action="#" method="POST">
-
-            <div class="form-group">
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" name="name" required placeholder="Tu nombre y apellido">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-            </div>
-
-            <div class="form-group">
-                <label for="subject">Asunto:</label>
-                <select id="subject" name="subject" required>
-                    <option value="" disabled selected>Selecciona un motivo</option>
-                    <option value="voluntariado">Dudas sobre un Voluntariado</option>
-                    <option value="colaboracion">Propuesta de Colaboración / Eventos</option>
-                    <option value="general">Consulta General</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required
-                    placeholder="Escribe tu mensaje aquí..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-button">Enviar Mensaje </button>
-        </form>
-
-    </section>
-
-
-
-
-
-    <section class="faq-section" id="faq-section">
-        <h2>Preguntas Frecuentes</h2>
-
-        <div class="faq-container">
-
-
-            <details class="faq-item">
-                <summary class="faq-question">¿Cualquiera puede ser voluntario?</summary>
-                <p class="faq-answer">Sí, la voluntad es el requisito principal. La mayoría de nuestros programas
-                    requieren ser mayor de 18 años o si es menor de edad necesitara el permiso de sus tutores. Para
-                    ciertos proyectos especializados (médicos, enseñanza, etc.) se
-                    pueden requerir habilidades o titulaciones específicas, pero muchos solo necesitan entusiasmo y
-                    compromiso.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary class="faq-question">¿Necesito experiencia previa para ser voluntario?</summary>
-                <p class="faq-answer">Para la mayoría de los proyectos no se requiere experiencia previa. Sólo
-                    necesitas motivación y voluntad de ayudar. Sin embargo, en programas muy específicos (médicos,
-                    enseñanza especializada), sí se podría requerir certificación. En cada ficha de proyecto se
-                    especifican los requisitos necesarios.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary class="faq-question">¿Cómo funciona el sistema de puntos de los voluntarios?</summary>
-                <p class="faq-answer">El sistema de puntos funciona como un
-                    mecanismo de gamificación y reconocimiento para motivar y recompensar la participación de los
-                    voluntarios. El objetivo principal es hacer la experiencia más atractiva, medible y visible.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary class="faq-question">¿Puedo elegir el proyecto y las tareas que quiero realizar?
-                </summary>
-                <p class="faq-answer">Sí, puedes elegir el proyecto. No obstante, las tareas específicas se asignan en
-                    función de las necesidades reales del proyecto en ese momento y de tu perfil, asegurando que tu
-                    ayuda sea lo más efectiva posible.</p>
-            </details>
-
+                <article class="articleods"><img class="odsimg" id="odsimg6" src="<%=request.getContextPath()%>/assets/ods/ods17.png" alt="ODS 17">
+                    <img class="hoverimg" src="<%=request.getContextPath()%>/assets/ods/alianza_hover.jpg" alt="">
+                </article>
+            </section>
         </div>
-    </section>
-
-
-
-</main>
 
 
 
 
 
 
+
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class VoluntariadoBD extends AccesoBD {
 
 	public VoluntariadoBD() throws ClassNotFoundException, SQLException {
-		super(TYPE_MYSQL, "localhost", "voluntariadoBD", 3306, "root", "z");
+		super(TYPE_MYSQL, "localhost", "voluntariadobd", 3306, "root", "z");
 
 	}
 
@@ -45,61 +45,155 @@ public class VoluntariadoBD extends AccesoBD {
 */				String nombre = rs.getString("nombre");
 
 
-				u = new Voluntariado(rs.getString("nif"),nombre,rs.getString("correo"),rs.getString("telefono"),rs.getString("ciudad"),rs.getInt("id"),
-				rs.getString("apellidos"), rs.getString("genero"),rs.getBoolean("vehiculo"), rs.getBoolean("discapacidad"),rs.getDate("fecha_nacimiento"));
+				u = new Voluntariado(rs.getString("nif"),nombre,rs.getString("correo"),rs.getString("telefono"),rs.getString("ciudad"),rs.getInt("id"),rs.getString("id_roles"),
+				rs.getString("apellidos"), rs.getString("genero"),nombre, rs.getBoolean("vehiculo"), rs.getBoolean("discapacidad"),rs.getDate("fecha_nacimiento"));
 						
+			}else  {
+				rs.getString("nombre_rol").equals("Empresa");
+				String nombre = rs.getString("nombre");
 				
+				/*String nif, String nombre, String correo, String telefono, String ciudad, int id, String pass,
+				String id_roles, String nombre_empresa, String tipo_empresa*/
+				u = new UserEmpresa(rs.getString("nif"),nombre,rs.getString("correo"),rs.getString("telefono"),rs.getString("ciudad"),rs.getInt("id"),rs.getString("id_roles"),
+						 nombre, nombre, nombre);
 			}
-			
-			
-			
 
 		}
 		return u;
 	}
+
 	
-	public UserEmpresa registerEmpresa(
-	        String nif,String correo,String telefono,String ciudad,String nombre_empresa,String tipo_empresa, String pass
-	) throws SQLException {
-		
-	    String sql = "INSERT INTO userempresa " +
-	                 "(nif, correo, telefono, ciudad, nombre_empresa, tipo_empresa,pass) " +
-	                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-	    PreparedStatement ps = lanzarInsert(sql);
-
-	    ps.setString(1, nif);
-	    ps.setString(2, correo);
-	    ps.setString(3, telefono);
-	    ps.setString(4, ciudad);
-	    ps.setString(5, nombre_empresa);
-	    ps.setString(6, tipo_empresa);
-	    ps.setString(7, pass);
-		return null;
 		
 	    
 	    
 
 	  
-	    }
+	    
 
 	/**
 	 * Registrar voluntario     
 	 * id tiene que ser 2
 	 * @param v
+	 * @throws SQLException 
 	 */
-	public void registrarVoluntario(Voluntariado v) {
+	public void registrarVoluntario(Voluntariado v) throws SQLException  {
 		//1. Crear usuario
+		//String sql ="Insert into usuarios" +"(id_roles)"+"Values(2)";
 		
 		
-		//2. Obtener id del usuario creado (where corrreo=v.correo
+		st= con.createStatement();
+		
+
+		
+
+		String sql = "INSERT INTO usuarios (id_roles, nif, nombre, correo, telefono, ciudad, `pass`) VALUES (" +
+	             "2, '" +
+	             v.getNif() + "', '" +
+	             v.getNombre() + "', '" +
+	             v.getCorreo() + "', '" +
+	             v.getTelefono() + "', '" +
+	             v.getCiudad() + "', '" +
+	             v.getPass() + "')";           
 		
 		
-		//3 Crear registro en la tabla de voluntariado utilizando de clave el id obtenido
+		
+		st.executeUpdate(sql);
+		
+		
+		
+		
+
+		User uCreado = getusuario(v.getCorreo(),v.getPass());
+		System.out.println(v);
+		String sql3 = "INSERT INTO voluntariado (id, apellidos, discapacidad, vehiculo, genero, fecha_nacimiento) VALUES ('" 
+		        +  uCreado.getId() + "', '" 
+		        + v.getApellidos() + "', "
+		        + v.getDiscapacidad() + ", '"
+		        + v.getVehiculo() + "', '"
+		        + v.isGenero() + "', '"
+		        + v.getNacimiento() + "')";
+		st.executeUpdate(sql3);
+
 		
 	}
 
-	   
+	public void registrarEmpresa(UserEmpresa e) throws SQLException {
 	
+		st= con.createStatement();
+		
+
+		
+
+		String sql = "INSERT INTO usuarios (id_roles, nif, nombre, correo, telefono, ciudad, `pass`) VALUES (" +
+	             "3, '" +
+	             e.getNif() + "', '" +
+	             e.getNombre() + "', '" +
+	             e.getCorreo() + "', '" +
+	             e.getTelefono() + "', '" +
+	             e.getCiudad() + "', '" +
+	             e.getPass() + "')";           
+		
+		st.executeUpdate(sql);
+		
+		
+		
+		
+		
+		
+		
+	    ResultSet rs = st.executeQuery("SELECT LAST_INSERT_ID()");
+	    rs.next();
+	    int idUsuario = rs.getInt(1);
+
+	    String sql2 = "INSERT INTO empresa (id, nombre_empresa, tipo_empresa) VALUES (" +
+	            idUsuario + ", '" +
+	            e.getNombre_empresa() + "', '" +
+	            e.getTipo_empresa() + "')";
+
+	    st.executeUpdate(sql2);
+
+    }
+
+	public void crearevento(Eventos e) throws SQLException {
+		
+
+		st= con.createStatement();
+		
+
+		//Eventos e = new Eventos(0, nombre, num_voluntarios, id_tipo_voluntarios, descripcion, fecha1, categoria, num_tipo, zona);
+		
+
+		String sql = "INSERT INTO eventos (id, nombre, num_voluntarios, id_tipo_voluntariados, descripcion, fecha, n) VALUES ("  
+			    + e.getId() + ", '"
+			    + e.getNombre() + "', "
+			    + e.getNum_voluntarios() + ", "
+			    + e.getId_tipo_voluntariados() + ", '"
+			    + e.getDescripcion() + "', '"
+			    + e.getFecha() + "')"; 
+		
+		
+		
+		st.executeUpdate(sql);
+		
+		
+	
+		
 	}
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+	
+
+
+
+}
+	
+	
 	
